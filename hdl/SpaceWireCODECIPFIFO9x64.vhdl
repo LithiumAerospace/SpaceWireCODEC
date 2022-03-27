@@ -90,21 +90,21 @@ architecture RTL of SpaceWireCODECIPFIFO9x64 is
     signal iReadReset         : std_logic;
     signal iWriteResetTime    : std_logic_vector(1 downto 0);
     signal iReadResetTime     : std_logic_vector(1 downto 0);
-    signal iWritePointer      : unsigned(5 downto 0);
-    signal iGrayWritePointer  : unsigned(5 downto 0);
-    signal iGrayWritePointer1 : unsigned(5 downto 0);
-    signal iGrayWritePointer2 : unsigned(5 downto 0);
-    signal iGrayWritePointer3 : unsigned(5 downto 0);
-    signal iWritePointer4     : unsigned(5 downto 0);
-    signal iReadPointer       : unsigned(5 downto 0);
-    signal iGrayReadPointer   : unsigned(5 downto 0);
-    signal iGrayReadPointer1  : unsigned(5 downto 0);
-    signal iGrayReadPointer2  : unsigned(5 downto 0);
-    signal iReadPointer3      : unsigned(5 downto 0);
-    signal iWriteDataCount    : unsigned(5 downto 0);
+    signal iWritePointer      : unsigned(5 downto 0) := "000000";
+    signal iGrayWritePointer  : unsigned(5 downto 0) := "000000";
+    signal iGrayWritePointer1 : unsigned(5 downto 0) := "000000";
+    signal iGrayWritePointer2 : unsigned(5 downto 0) := "000000";
+    signal iGrayWritePointer3 : unsigned(5 downto 0) := "000000";
+    signal iWritePointer4     : unsigned(5 downto 0) := "000000";
+    signal iReadPointer       : unsigned(5 downto 0) := "000000";
+    signal iGrayReadPointer   : unsigned(5 downto 0) := "000000";
+    signal iGrayReadPointer1  : unsigned(5 downto 0) := "000000";
+    signal iGrayReadPointer2  : unsigned(5 downto 0) := "000000";
+    signal iReadPointer3      : unsigned(5 downto 0) := "000000";
+    signal iWriteDataCount    : unsigned(5 downto 0) := "000000";
     signal iFull              : std_logic;
     signal iReadDataOut       : std_logic_vector(8 downto 0);
-    signal iReadDataCount     : unsigned(5 downto 0);
+    signal iReadDataCount     : unsigned(5 downto 0) := "000000";
     signal iEmpty             : std_logic;
 
 begin

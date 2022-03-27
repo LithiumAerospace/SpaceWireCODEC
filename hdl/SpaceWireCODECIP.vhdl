@@ -122,9 +122,9 @@ architecture Behavioral of SpaceWireCODECIP is
             transmitData                : in  std_logic_vector (7 downto 0);
             transmitDataControlFlag     : in  std_logic;
             transmitReady               : out std_logic;
-            transmitClockDivideValue    : in  unsigned (5 downto 0);
-            creditCount                 : out unsigned (5 downto 0);
-            outstndingCount             : out unsigned (5 downto 0);
+            transmitClockDivideValue    : in  unsigned (5 downto 0) := "000000";
+            creditCount                 : out unsigned (5 downto 0) := "000000";
+            outstndingCount             : out unsigned (5 downto 0) := "000000";
             -- receiver.
             receiveClock                : in  std_logic;
             tickOut                     : out std_logic;
